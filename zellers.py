@@ -28,8 +28,6 @@ days = ["sunday",
 year = input("Year: ")
 while year<1582:
     year = input("Enter a year of the gregorian calendar (>=1582): ")
-C = year % 100              # C assigned to year : 89 for 1989, ...
-D = year // 100             # A assigned to century : 19 for 1989, ...
 
 # Input a month name (ie: january, february, etc.)
 # loop while input is invalid
@@ -61,11 +59,12 @@ while not((B>0) and (B<=month_days)):
 
 
 # Corrections for algorithm
+cyear = year                 # to keep original year to print final result
 if A in [11,12]:
-    C -= 1
-if C == -1:
-    D -= 1
-    C = 99
+    cyear -= 1
+C = cyear % 100              # C assigned to year : 89 for 1989, ...
+D = cyear // 100             # A assigned to century : 19 for 1989, ...
+
 # Algorith following homework
 W = (13*A - 1) / 5
 X = C / 4
