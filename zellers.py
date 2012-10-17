@@ -1,3 +1,5 @@
+# First draw for zellers optionnal homework
+
 months = ["march",
            "april",
            "may",
