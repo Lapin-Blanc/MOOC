@@ -31,7 +31,7 @@ while year<1582:
 C = year % 100              # C assigned to year : 89 for 1989, ...
 D = year // 100             # A assigned to century : 19 for 1989, ...
 
-# Input a month name (ie: january, february, etc.
+# Input a month name (ie: january, february, etc.)
 # loop while input is invalid
 month_name = raw_input("Month name in english: ").lower()
 while month_name not in months:
@@ -66,7 +66,6 @@ if A in [11,12]:
 if C == -1:
     D -= 1
     C = 99
-# print A, B, C, D
 # Algorith following homework
 W = (13*A - 1) / 5
 X = C / 4
